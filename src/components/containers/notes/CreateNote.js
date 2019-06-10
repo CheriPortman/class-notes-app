@@ -19,7 +19,7 @@ class CreateNote extends PureComponent {
     event.preventDefault();
     const { title, body } = this.state;
     this.props.createNote({ title, body });
-    this.setState({ title: '', body: '' });
+    this.setState({ title: '', body: '' });  //this resets the form
   }
 
   handleChange = ({ target }) => {
