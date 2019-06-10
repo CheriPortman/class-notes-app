@@ -1,6 +1,7 @@
 import React from 'react';
 
+import CreateNote from '../components/containers/notes/CreateNote';
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <CreateNote />;
 }
-  
