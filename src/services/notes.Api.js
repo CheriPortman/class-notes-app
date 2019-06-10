@@ -1,8 +1,3 @@
-export const createNote = note => {
-  return Promise.resolve({
-    _id: 'llsodiuv',
-    ...note
-  });
-};
+import { post } from './request';
 
-//note for commit - this allows me to test files using a fake api
+export const createNote = note => post('/api/v1/notes', note);
