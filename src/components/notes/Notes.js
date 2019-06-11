@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Note from './Note';
 
 function Notes({ notes }) {
+  console.log(notes);
   const noteList = notes.map(note => (
     <li key={note._id}>
       <Note note={note} />
