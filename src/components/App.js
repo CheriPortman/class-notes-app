@@ -1,13 +1,21 @@
 import React from 'react';
+import { 
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
-import CreateNote from '../containers/notes/CreateNote';
-import AllNotes from '../containers/notes/AllNotes';
+import Home from './Home';
+import Callback from '../containers/auth/Callback';
+import { withSession } from '../containers/auth/withSession';
 
 export default function App() {
   return (
-  <>
-    <CreateNote />
-    <AllNotes />
-  </>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={withSession(Home)} />
+        <Route path="/callback" component={Callback} />
+      </Switch>
+    </Router>
   );
 }

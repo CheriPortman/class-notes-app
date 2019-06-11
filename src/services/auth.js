@@ -3,10 +3,14 @@ import { WebAuth } from 'auth0-js';
 const auth0 = new WebAuth({
   domain: 'dev-hgz2e141.auth0.com',
   clientID: 'RvRTqFDNDiFHa0qh1ioFsgAzuEuvYHt1',
-  redirectUri: 'http://localhost: 7890/callback',
+  redirectUri: 'http://localhost:7890/callback',
   responseType: 'token id_token',
   scope: 'openid profile'
 });
+
+// AUTH0_DOMAIN=
+// AUTH0_CLIENT_ID=
+// AUTH0_CALLBACK=
 
 //send to auth0 for login if not logged in
 export const login = () => {
