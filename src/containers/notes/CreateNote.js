@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import NoteForm from '../../notes/NoteForm';
-import { newNote } from '../../../actions/notesActions';
+import NoteForm from '../../components/notes/NoteForm';
+import { newNote } from '../../actions/notesActions';
 
 class CreateNote extends PureComponent {
   static propTypes = {
